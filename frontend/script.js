@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://ai-agent-1-18wb.onrender.com";
 
 function showToast(msg, type = "success") {
     const toast = document.createElement("div");
