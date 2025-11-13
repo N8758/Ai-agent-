@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Task Agent</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1><i class="fa-solid fa-robot"></i> AI Task Scheduling Agent</h1>
+    </header>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- Add Task -->
+        <div class="card">
+            <h2><i class="fa-solid fa-plus"></i> Add New Task</h2>
+
+            <form id="taskForm">
+
+                <label>Task Name</label>
+                <input type="text" id="taskName" placeholder="Enter task title..." required>
+
+                <label>Estimated Hours</label>
+                <input type="number" id="taskHours" min="1" value="1" required>
+
+                <label>Deadline</label>
+                <input type="date" id="taskDeadline">
+
+                <label>Priority</label>
+                <select id="taskPriority">
+                    <option>High</option>
+                    <option selected>Medium</option>
+                    <option>Low</option>
+                </select>
+
+                <button type="submit"><i class="fa-solid fa-circle-plus"></i> Add Task</button>
+            </form>
+        </div>
+
+        <!-- Task List -->
+        <div class="card">
+            <h2><i class="fa-solid fa-list-check"></i> Task List</h2>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Schedule -->
+        <div class="card">
+            <h2><i class="fa-solid fa-calendar-week"></i> Generated Schedule</h2>
+            <button id="btnSchedule"><i class="fa-solid fa-bolt"></i> Generate Schedule</button>
+            <div id="schedule"></div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 AI Task Agent</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

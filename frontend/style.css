@@ -1,0 +1,165 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* PAGE */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background: #000;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 26px;
+    border-bottom: 1px solid #222;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #222;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* CARDS */
+.card {
+    background: #111;       
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #222; 
+    color: #fff;
+}
+
+/* FORM */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* FIXED INPUT FIELDS FOR BLACK THEME */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    background: #111;              /* slightly lighter than #000 */
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 15px;
+}
+
+/* Placeholder color visible now */
+input::placeholder {
+    color: #888;
+}
+
+/* Date picker icon fix (white icon now visible) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);  /* makes icon white */
+    cursor: pointer;
+}
+
+/* Focus border highlight */
+input:focus, select:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #005bd1;
+}
+
+/* TASK LIST */
+#taskList li {
+    background: #111;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Delete Button */
+#taskList li button {
+    background: #c92a2a;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+#taskList li button:hover {
+    background: #a61e1e;
+}
+
+/* OVERDUE */
+.overdue {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* SCHEDULE DAY */
+.schedule-day {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    margin-top: 14px;
+    border: 1px solid #222;
+}
+
+.schedule-day h3 {
+    margin-top: 0;
+}
+
+/* TOAST */
+.toast {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #28a745;
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    z-index: 999;
+}
+
+.toast.error {
+    background: #d63031;
+}
